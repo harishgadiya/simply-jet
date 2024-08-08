@@ -1,4 +1,4 @@
-## Simply Jet
+# Simply Jet application
 
 Simply Jet is a Next.js application designed for managing user data efficiently. The application features a modern UI with functionalities for CRUD operations, user search, filtering, pagination, and more. It utilizes Tanstack Table for dynamic data handling and Tailwind CSS for responsive design.
 
@@ -55,23 +55,28 @@ Home: `/` - Main landing page.
 Dashboard: `/dashboard` - User management interface.
 
 ## Folder Structure
-
+```tree
 simply-jet/
 │
 ├── public/               # Public assets (images, fonts, etc.)
 │
 ├── src/
-│   ├── components/       # Reusable components
-│   ├── pages/            # Next.js pages
-│   │   ├── index.tsx     # Home page
-│   │   ├── dashboard.tsx # Dashboard page
-│   ├── styles/           # Tailwind CSS configuration
-│   ├── utils/            # Utility functions and hooks
+|   |__ app/
+│       ├── components/         # Reusable components
+│   ├── pages/                  # Next.js pages
+|   |   |__ api/                # Next.js API's
+|   |   |   |__ MOCK_DATA.json  # Mock data for our dashboard
+|   |   |   |__ users.ts        # users API for create, update, edit, delete
+│   │   ├── index.tsx           # Home page
+│   │   ├── dashboard.tsx       # Dashboard page
+│   ├── styles/                 # Tailwind CSS configuration
+│   ├── utils/                  # Utility functions and hooks
 │
-├── README.md             # Project documentation
-├── tailwind.config.js    # Tailwind CSS configuration file
-├── tsconfig.json         # TypeScript configuration file
-└── package.json          # Project dependencies and scripts
+├── README.md                   # Project documentation
+├── tailwind.config.js          # Tailwind CSS configuration file
+├── tsconfig.json               # TypeScript configuration file
+└── package.json                # Project dependencies and scripts
+```
 
 ## Components
 ### 1. Header
