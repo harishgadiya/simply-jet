@@ -193,7 +193,7 @@ const UsersTable: React.FC = () => {
     []
   );
 
-  const [globalFilter, setGlobalFilter] = useState('');
+  const [globalFilter, setGlobalFilter] = useState("");
   const table = useReactTable({
     columns,
     data: users || [],
@@ -221,9 +221,9 @@ const UsersTable: React.FC = () => {
 
   const handleDeleteSelected = () => {
     console.log(table.getSelectedRowModel(), table.getSelectedRowModel, table);
-    debugger;
     const selectedRowIds = Object.keys(table.getSelectedRowModel);
-    selectedRowIds.forEach((id) => deleteMutation.mutate(id));
+    // @ts-ignore
+    selectedRowIds.forEach((id: string) => deleteMutation.mutate(id));
   };
 
   return (
@@ -232,14 +232,8 @@ const UsersTable: React.FC = () => {
         <input
           type="text"
           placeholder="Search users..."
-          value={globalFilter || ''}
-        onChange={e => setGlobalFilter(e.target.value)}
-          // value={searchQuery || table?.state?.globalFilter}
-          // onChange={(e) => {
-          //   setSearchQuery(e.target.value);
-          //   // filteredUser
-          //   // table.setGlobalFilter(e.target.value)
-          // }}
+          value={globalFilter || ""}
+          onChange={(e) => setGlobalFilter(e.target.value)}
           className="appearance-none block w-full max-w-xs border border-gray-200 rounded py-2 px-4 leading-tight dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
         />
         <div className="w-full md:w-auto flex flex-col md:flex-row space-y-2 md:space-y-0 font-bold items-stretch md:items-center justify-end md:space-x-3 flex-shrink-0">

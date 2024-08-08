@@ -1,6 +1,20 @@
 import React from "react";
 
-const UserForm = ({ handleSubmit, onSubmit, setShowModal, register, shouldUpdateUser }) => {
+interface UserForm {
+  handleSubmit: any;
+  onSubmit: any;
+  setShowModal: any;
+  register: any;
+  shouldUpdateUser: any;
+}
+
+const UserForm: React.FC<UserForm> = ({
+  handleSubmit,
+  onSubmit,
+  setShowModal,
+  register,
+  shouldUpdateUser,
+}) => {
   return (
     <>
       <form onSubmit={handleSubmit(onSubmit)} className="w-full max-w-lg mb-6">
@@ -10,7 +24,9 @@ const UserForm = ({ handleSubmit, onSubmit, setShowModal, register, shouldUpdate
             <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
               {/*header*/}
               <div className="flex items-start justify-between p-5 border-b border-solid border-blueGray-200 rounded-t">
-                <h3 className="text-3xl font-semibold">{shouldUpdateUser ? 'Update User' : 'Add User'}</h3>
+                <h3 className="text-3xl font-semibold">
+                  {shouldUpdateUser ? "Update User" : "Add User"}
+                </h3>
 
                 <button
                   className="p-1 ml-auto bg-transparent border-0 text-black opacity-5 float-right text-3xl leading-none font-semibold outline-none focus:outline-none"
@@ -142,7 +158,7 @@ const UserForm = ({ handleSubmit, onSubmit, setShowModal, register, shouldUpdate
                   className="dark:bg-gray-900 text-white active:bg-emerald-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                   type="submit"
                 >
-                  {shouldUpdateUser ? 'Update User' : 'Add User'}
+                  {shouldUpdateUser ? "Update User" : "Add User"}
                 </button>
               </div>
             </div>
