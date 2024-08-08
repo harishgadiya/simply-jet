@@ -4,11 +4,16 @@ Simply Jet is a Next.js application designed for managing user data efficiently.
 
 ## Table of Contents
 Features
+
 Tech Stack
+
 Installation
+
 Usage
+
 Folder Structure
-Components  
+
+Components
 
 
 ## Features
