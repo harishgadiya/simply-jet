@@ -1,14 +1,22 @@
 # Simply Jet application
 
+#### This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+
+
 Simply Jet is a Next.js application designed for managing user data efficiently. The application features a modern UI with functionalities for CRUD operations, user search, filtering, pagination, and more. It utilizes Tanstack Table for dynamic data handling and Tailwind CSS for responsive design.
 
 ## Table of Contents
 Features
+
 Tech Stack
+
 Installation
+
 Usage
+
 Folder Structure
-Components  
+
+Components
 
 
 ## Features
@@ -89,7 +97,3 @@ Displays the site’s footer with links and additional information.
 Located in src/components/UserTable.tsx
 Implements the user table with Tanstack Table, including searching, filtering, pagination, and multi-select functionalities.
 
-
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
-## Getting Started
