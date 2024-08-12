@@ -1,0 +1,42 @@
+.menuButton {
+  position: relative;
+  top: 10px;
+  right: 20px;
+  z-index: 1000;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 20px;
+  margin-left: 40px;
+}
+
+.line {
+  width: 100%;
+  height: 3px;
+  background-color: white;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.93);
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.menuItem {
+  font-size: 8rem;
+  color: white;
+  margin: 20px 0;
+  cursor: pointer;
+  letter-spacing: 5px;
+  font-family: "Six Caps", system-ui;
+}

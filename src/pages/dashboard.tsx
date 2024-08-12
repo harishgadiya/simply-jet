@@ -1,20 +1,23 @@
 import { NextPage } from "next";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import Users from "../app/components/Users";
 import Link from "next/link";
+import Header from "@/app/components/Header";
 
 const Dashboard: NextPage = () => {
   const [selectedTab, setSelectedTab] = useState<"users">("users");
-
+  const stickyElement = useRef<HTMLDivElement | null>(null);
   return (
-    <div className="min-h-screen flex bg-gray-50 dark:bg-gray-900">
+    <>
+    <Header ref={stickyElement} />
+    <div className="min-h-screen flex bg-slate-950 dark:bg-slate-950">
       <div className="w-3/4 p-4">{selectedTab === "users" && <Users />}</div>
-      <div className="w-1/4 bg-gray-800 text-white p-4">
+      <div className="w-1/4 bg-slate-900 dark:bg-slate-900 text-white p-4">
         <nav>
           <ul>
             <li
               className={`p-2 cursor-pointer ${
-                selectedTab === "users" ? "bg-gray-700" : ""
+                selectedTab === "users" ? "bg-slate-950 dark:bg-slate-950" : ""
               }`}
               onClick={() => setSelectedTab("users")}
             >
@@ -27,6 +30,7 @@ const Dashboard: NextPage = () => {
         </nav>
       </div>
     </div>
+    </>
   );
 };
 

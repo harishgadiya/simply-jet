@@ -3,7 +3,7 @@ import UsersTable from "./UserTable";
 
 const Users: React.FC = () => {
   return (
-    <div className="bg-gray-50 dark:bg-gray-900 p-3 sm:p-5 antialiased">
+    <div className="bg-slate-950 dark:bg-slate-950 p-3 sm:p-5 antialiased">
       <UsersTable />
     </div>
   );
